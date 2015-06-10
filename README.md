@@ -2,7 +2,8 @@
 
 ![](design/icon/128.png)
 
-# Language
+# Languages
+[English](README.md)
 [中文](doc/README_zh.md)
 
 # iOSPushUtility
