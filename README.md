@@ -3,8 +3,8 @@
 ![](design/icon/128.png)
 
 # Languages
-[English](README.md)
-[中文](doc/README_zh.md)
+* [English](README.md)
+* [中文](doc/README_zh.md)
 
 # iOSPushUtility
 Pushing test utility for iOS. `iOSPushUtility` dependent [Houston](https://github.com/nomad/Houston). If you want test pushing without server host, then you came hear right!
