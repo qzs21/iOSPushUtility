@@ -2,7 +2,7 @@
 
 ![](design/icon/128.png)
 
-# Languages
+# Language
 * [English](README.md)
 * [中文](doc/README_zh.md)
 
