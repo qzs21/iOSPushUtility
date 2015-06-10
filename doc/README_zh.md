@@ -1,4 +1,4 @@
-[![License](https://github.com/qzs21/iOSPushUtility)](http://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](http://opensource.org/licenses/MIT)
 
 ![](../design/icon/128.png)
 # iOSPushUtility 
