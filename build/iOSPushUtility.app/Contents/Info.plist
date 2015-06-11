@@ -39,7 +39,7 @@
 	<key>DTXcodeBuild</key>
 	<string>6D2105</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.10</string>
+	<string>10.8</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2015年 Neva. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
