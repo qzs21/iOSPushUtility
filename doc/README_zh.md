@@ -20,6 +20,12 @@
 # 注意⚠
 * 如果你没有安装[Houston](https://github.com/nomad/Houston)在你的Mac上，`iOSPushUtility`将会检测到，并显示`Install Houston`按钮，请点击此按钮安装[Houston](https://github.com/nomad/Houston)。
 * `Token`是从用户设备中获取而来的，在`AppDelegate`的`application:didRegisterForRemoteNotificationsWithDeviceToken`方法中，将`NSData`转成`16进制字符串`。( [0x01,0x02,0x0A,0x0B] => "01020A0B" )
+* 国内用户访问`gem`默认源可能会速度缓慢，建议切换到淘宝源，切换方法如下
+```shell
+$ gem sources -l # 查看当前使用的源列表
+$ gem sources --remove https://rubygems.org/ # 删除默认源
+$ gem sources -a http://ruby.taobao.org/ # 添加淘宝源
+```
 
 # 截图
 ![](../doc/snapshot/UI.png)
