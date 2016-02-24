@@ -12,7 +12,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aafLzhbvFeyAZFt4q2GdIvn42mQ=
+			2qSEj+/akbRGi+BlYWogztHJteE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -21,7 +21,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XV8hL5QbDoC0APzP18uknkhpF9U=
+			QicIvSPohwEE3rjXaYA8q8dfX5o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -30,7 +30,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aY1msWJPb1qEDynVHLPGaebf1JY=
+			XPidkGQt2V7onNcwh/R20PzN2sY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -39,7 +39,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EaotA2p46WU1EkEPphyOR9h3CwI=
+			pNVuAf9ExCYL23pH0VFOxUTi2QU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -56,14 +56,25 @@
 	<key>files2</key>
 	<dict>
 		<key>Resources/AppIcon.icns</key>
-		<data>
-		vkoO3mYDko5PEeV1BkMu5YqJCwM=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			vkoO3mYDko5PEeV1BkMu5YqJCwM=
+			</data>
+			<key>hash2</key>
+			<data>
+			HItiRIlNoP2qhFY5Nqfg8GGH6Ch7GOl5B9ZFJ1QPz9o=
+			</data>
+		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aafLzhbvFeyAZFt4q2GdIvn42mQ=
+			2qSEj+/akbRGi+BlYWogztHJteE=
+			</data>
+			<key>hash2</key>
+			<data>
+			LJYO67xZXsbcyRr3sTiXfNHveRYnUyhPSCAxFl5ZVu0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -72,7 +83,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XV8hL5QbDoC0APzP18uknkhpF9U=
+			QicIvSPohwEE3rjXaYA8q8dfX5o=
+			</data>
+			<key>hash2</key>
+			<data>
+			aitU6t696LaiEGQ1gSy06pNH8uptTMJmunHR308mAwc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -81,7 +96,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aY1msWJPb1qEDynVHLPGaebf1JY=
+			XPidkGQt2V7onNcwh/R20PzN2sY=
+			</data>
+			<key>hash2</key>
+			<data>
+			QyzlHUCx7WJmDLMT77Gju9KVAyhIWqIS55cdZ7lrlPQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -90,19 +109,37 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EaotA2p46WU1EkEPphyOR9h3CwI=
+			pNVuAf9ExCYL23pH0VFOxUTi2QU=
+			</data>
+			<key>hash2</key>
+			<data>
+			iTVvCqg7gBR/L4D7VMGFmeXn4wgVjX10q+oL1LnSzxI=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Resources/install.sh</key>
-		<data>
-		Ss8Ev+MUKNc6ozMfGdTvpUQHR44=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ss8Ev+MUKNc6ozMfGdTvpUQHR44=
+			</data>
+			<key>hash2</key>
+			<data>
+			lDROqktIffXrFiRkbW+C8zoJdw+OdlA9Qj3g0zRCQpw=
+			</data>
+		</dict>
 		<key>Resources/uninstall.sh</key>
-		<data>
-		kHfTV+0C+wVCgvrVOuw0aeLga+w=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			kHfTV+0C+wVCgvrVOuw0aeLga+w=
+			</data>
+			<key>hash2</key>
+			<data>
+			+appupCzOAl1IyoPmo1QIVPnQ3gyKF9z4RhYMSK4UAQ=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
