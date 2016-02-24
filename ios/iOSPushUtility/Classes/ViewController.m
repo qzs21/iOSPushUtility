@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "NSTextField+CopyPast.h"
 #import "ScriptHelper.h"
+#import "AMR_ANSIEscapeHelper.h"
 
 #define SAVE_STRING(str)   (((str)&&![(str) isKindOfClass:NSNull.class])?[NSString stringWithFormat:@"%@",(str)]:@"")
 
@@ -23,6 +24,7 @@
 @property (weak) IBOutlet NSButton *pushButton;
 @property (weak) IBOutlet NSProgressIndicator *progressInstall;
 @property (weak) IBOutlet NSProgressIndicator *progressPush;
+@property (weak) IBOutlet NSTextField *outputLab;
 
 @property (nonatomic, assign) BOOL isPushing;
 @property (nonatomic, assign) BOOL isInstalling;
@@ -40,36 +42,44 @@
     [super viewDidLoad];
     [self loadInput];
     [self updateButtons];
+    self.outputLab.stringValue = @"";
 }
 
 - (void)updateButtons
 {
     BOOL hasHouston = [ScriptHelper hasHouston];
     
+    self.outputLab.hidden = !hasHouston;
+    
     // Install Button
     self.installButton.hidden = hasHouston;
     self.installButton.enabled = !self.isInstalling;
-    self.progressInstall.hidden = !self.isInstalling;
+    dispatch_async(dispatch_get_main_queue(), ^{
+       self.progressInstall.hidden = !self.isInstalling;
+    });
     if (self.isInstalling)
     {
-        [self.progressInstall startAnimation:nil];
+        [self.progressInstall startAnimation:self];
     }
     else
     {
-        [self.progressInstall stopAnimation:nil];
+        [self.progressInstall stopAnimation:self];
     }
     
     // Push Button
     self.pushButton.enabled = hasHouston && !self.isPushing;
-    self.progressPush.hidden = !self.isPushing;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.progressPush.hidden = !self.isPushing;
+    });
     if (self.isPushing)
     {
-        [self.progressPush startAnimation:nil];
+        [self.progressPush startAnimation:self];
     }
     else
     {
-        [self.progressPush stopAnimation:nil];
+        [self.progressPush stopAnimation:self];
     }
+
 }
 
 - (void)setRepresentedObject:(id)representedObject
@@ -162,14 +172,21 @@
 - (void)runAPNCmdWithArgs:(NSArray *)args
 {
     self.isPushing = YES;
+    self.outputLab.stringValue = @"Pushing message...";
     [self updateButtons];
     
-    NSTask * task = [NSTask launchedTaskWithLaunchPath:CMD_APN_PATH arguments:args];
-    task.terminationHandler = ^(NSTask * t)
-    {
+    [ScriptHelper runCommand:[ScriptHelper getAPNPath] arguments:args handler:^(NSString *output, BOOL success) {
         self.isPushing = NO;
         [self updateButtons];
-    };
+        
+        AMR_ANSIEscapeHelper *ansiEscapeHelper =
+        [[AMR_ANSIEscapeHelper alloc] init];
+        
+        // display an ANSI-escaped string in a text view:
+        NSString *ansiEscapedStr = output;
+        NSAttributedString *attrStr = [ansiEscapeHelper attributedStringWithANSIEscapedString:ansiEscapedStr];
+        self.outputLab.attributedStringValue = attrStr;
+    }];
 }
 
 

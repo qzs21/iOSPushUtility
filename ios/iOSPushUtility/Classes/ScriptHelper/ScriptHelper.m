@@ -86,6 +86,42 @@
     });
 }
 
++ (void)runCommand:(NSString *)cmd arguments:(NSArray *)argument handler:(ScriptHelperHandler)handler
+{
+    if (argument == nil) { argument = @[]; }
+    
+    NSTask * task = [[NSTask alloc] init];
+    [task setLaunchPath:cmd];
+    [task setArguments:argument];
+
+    NSPipe * pipe = [NSPipe pipe];
+    [task setStandardOutput: pipe];
+    NSFileHandle * file = [pipe fileHandleForReading];
+    
+    [task launch];
+
+    task.terminationHandler = ^(NSTask * t)
+    {
+        NSData * data = [file readDataToEndOfFile];
+        NSString * string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"%@ %@\n%@", cmd, argument, string);
+        handler(string, true);
+    };
+}
+
++ (NSString *)getAPNPath;
+{
+    NSFileManager * manager = [NSFileManager defaultManager];
+    NSArray * array = @[@"/usr/bin/apn", @"/usr/local/bin/apn"];
+    for (NSString * p in array) {
+        if ([manager fileExistsAtPath:p isDirectory:NO]) {
+            return p;
+        }
+    }
+    return nil;
+}
+
+
 #pragma mark -
 + (NSString *)getInstallShellPath
 {
@@ -97,8 +133,7 @@
 }
 + (BOOL)hasHouston
 {
-    NSFileManager * manager = [NSFileManager defaultManager];
-    return [manager fileExistsAtPath:CMD_APN_PATH isDirectory:NO];
+    return [self getAPNPath].length > 0;
 }
 
 
