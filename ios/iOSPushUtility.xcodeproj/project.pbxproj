@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0066BF91C7D57D900C404F4 /* AMR_ANSIEscapeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B0066BF81C7D57D900C404F4 /* AMR_ANSIEscapeHelper.m */; };
 		B031ADD11B1FFFEF0087B606 /* iOSPushUtilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B031ADD01B1FFFEF0087B606 /* iOSPushUtilityTests.m */; };
 		B031AE041B2001A40087B606 /* NSTextField+CopyPast.m in Sources */ = {isa = PBXBuildFile; fileRef = B031ADF01B2001A40087B606 /* NSTextField+CopyPast.m */; };
 		B031AE051B2001A40087B606 /* ScriptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B031ADF31B2001A40087B606 /* ScriptHelper.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0066BF71C7D57D900C404F4 /* AMR_ANSIEscapeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMR_ANSIEscapeHelper.h; sourceTree = "<group>"; };
+		B0066BF81C7D57D900C404F4 /* AMR_ANSIEscapeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMR_ANSIEscapeHelper.m; sourceTree = "<group>"; };
 		B031ADB41B1FFFEE0087B606 /* iOSPushUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPushUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B031ADCA1B1FFFEF0087B606 /* iOSPushUtilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPushUtilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B031ADCF1B1FFFEF0087B606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0066BF61C7D57D900C404F4 /* AMR_ANSIEscapeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B0066BF71C7D57D900C404F4 /* AMR_ANSIEscapeHelper.h */,
+				B0066BF81C7D57D900C404F4 /* AMR_ANSIEscapeHelper.m */,
+			);
+			path = AMR_ANSIEscapeHelper;
+			sourceTree = "<group>";
+		};
 		B031ADAB1B1FFFEE0087B606 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +104,7 @@
 		B031ADB61B1FFFEE0087B606 /* iOSPushUtility */ = {
 			isa = PBXGroup;
 			children = (
+				B0066BF61C7D57D900C404F4 /* AMR_ANSIEscapeHelper */,
 				B031ADED1B2001A40087B606 /* Classes */,
 				B031ADF81B2001A40087B606 /* Main */,
 				B031ADFD1B2001A40087B606 /* Resource */,
@@ -279,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B031AE061B2001A40087B606 /* ViewController.m in Sources */,
+				B0066BF91C7D57D900C404F4 /* AMR_ANSIEscapeHelper.m in Sources */,
 				B031AE071B2001A40087B606 /* WindowController.m in Sources */,
 				B031AE051B2001A40087B606 /* ScriptHelper.m in Sources */,
 				B031AE041B2001A40087B606 /* NSTextField+CopyPast.m in Sources */,

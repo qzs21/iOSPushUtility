@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E39c" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -148,7 +149,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-YW-n1o">
-                                <rect key="frame" x="100" y="124" width="360" height="22"/>
+                                <rect key="frame" x="100" y="123" width="360" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="User Device's Token" drawsBackground="YES" id="nRb-AY-mdY">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -167,7 +168,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="58y-zm-qCP">
-                                <rect key="frame" x="100" y="87" width="339" height="22"/>
+                                <rect key="frame" x="100" y="86" width="339" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Sound File Name (default is sosumi.aiff)" drawsBackground="YES" id="3UJ-lz-A3K">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -175,7 +176,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o9v-Sv-xle">
-                                <rect key="frame" x="100" y="161" width="300" height="22"/>
+                                <rect key="frame" x="100" y="160" width="300" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Certificate File Path (*.pem)" drawsBackground="YES" id="lQf-AT-d8p">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -207,7 +208,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-qN-a5v">
-                                <rect key="frame" x="100" y="50" width="360" height="22"/>
+                                <rect key="frame" x="100" y="49" width="360" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Message Content" drawsBackground="YES" id="SzB-60-aRI">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -232,7 +233,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3ii-gN-a01">
-                                <rect key="frame" x="14" y="5" width="133" height="32"/>
+                                <rect key="frame" x="14" y="5" width="131" height="32"/>
                                 <buttonCell key="cell" type="push" title="Install Houston" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mvF-SU-dBd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -241,12 +242,23 @@
                                     <action selector="onInstallTouch:" target="XfG-lQ-9wD" id="DaL-Mn-FI3"/>
                                 </connections>
                             </button>
-                            <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="enC-dn-WwO">
-                                <rect key="frame" x="149" y="14" width="16" height="16"/>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="enC-dn-WwO">
+                                <rect key="frame" x="147" y="14" width="16" height="16"/>
                             </progressIndicator>
                             <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="w3L-pY-eSs">
                                 <rect key="frame" x="377" y="14" width="16" height="16"/>
                             </progressIndicator>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vFF-GZ-WaR">
+                                <rect key="frame" x="18" y="12" width="70" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8qO-kz-kN6"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="output info" id="1Hc-7s-aR5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ylP-fE-XtN" firstAttribute="leading" secondItem="o9v-Sv-xle" secondAttribute="trailing" constant="10" id="4Vw-FH-kxK"/>
@@ -259,6 +271,8 @@
                             <constraint firstAttribute="trailing" secondItem="DcJ-qN-a5v" secondAttribute="trailing" constant="20" id="ABd-7K-Ic4"/>
                             <constraint firstAttribute="trailing" secondItem="ylP-fE-XtN" secondAttribute="trailing" constant="20" id="AFL-cH-lxc"/>
                             <constraint firstItem="w3L-pY-eSs" firstAttribute="centerY" secondItem="6Xi-OW-evn" secondAttribute="centerY" id="Bil-Rw-iYI"/>
+                            <constraint firstAttribute="bottom" secondItem="vFF-GZ-WaR" secondAttribute="bottom" constant="12" id="KcS-0D-2rG"/>
+                            <constraint firstItem="w3L-pY-eSs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vFF-GZ-WaR" secondAttribute="trailing" constant="8" id="OYb-za-BMN"/>
                             <constraint firstItem="d6U-If-mbq" firstAttribute="baseline" secondItem="58y-zm-qCP" secondAttribute="baseline" id="QXi-3A-psa"/>
                             <constraint firstItem="O40-fW-mG1" firstAttribute="top" secondItem="d6U-If-mbq" secondAttribute="bottom" constant="20" id="RvG-aP-vhS"/>
                             <constraint firstItem="d6U-If-mbq" firstAttribute="top" secondItem="C0i-LW-2MG" secondAttribute="bottom" constant="20" id="SMp-QX-aBt"/>
@@ -269,6 +283,7 @@
                             <constraint firstItem="VfS-YW-n1o" firstAttribute="leading" secondItem="C0i-LW-2MG" secondAttribute="trailing" constant="10" id="gVV-js-KfK"/>
                             <constraint firstItem="enC-dn-WwO" firstAttribute="leading" secondItem="3ii-gN-a01" secondAttribute="trailing" constant="8" id="gbf-8d-rJy"/>
                             <constraint firstItem="o9v-Sv-xle" firstAttribute="leading" secondItem="03T-DM-8wg" secondAttribute="trailing" constant="10" id="hdB-dv-OzV"/>
+                            <constraint firstItem="vFF-GZ-WaR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="huY-hb-Zja"/>
                             <constraint firstItem="enC-dn-WwO" firstAttribute="centerY" secondItem="3ii-gN-a01" secondAttribute="centerY" id="jTi-wu-ffZ"/>
                             <constraint firstItem="58y-zm-qCP" firstAttribute="leading" secondItem="d6U-If-mbq" secondAttribute="trailing" constant="10" id="kKO-LX-iDS"/>
                             <constraint firstAttribute="bottom" secondItem="6Xi-OW-evn" secondAttribute="bottom" constant="12" id="l5T-c1-0Wn"/>
@@ -287,6 +302,7 @@
                         <outlet property="cerPathField" destination="o9v-Sv-xle" id="Dz2-Hf-Zez"/>
                         <outlet property="installButton" destination="3ii-gN-a01" id="Qwo-sX-TXM"/>
                         <outlet property="msgField" destination="DcJ-qN-a5v" id="5Zc-Mc-MKx"/>
+                        <outlet property="outputLab" destination="vFF-GZ-WaR" id="21f-X8-2Ij"/>
                         <outlet property="progressInstall" destination="enC-dn-WwO" id="gcr-xB-X9o"/>
                         <outlet property="progressPush" destination="w3L-pY-eSs" id="N4c-bo-u3w"/>
                         <outlet property="pushButton" destination="6Xi-OW-evn" id="2DU-Zh-Qsv"/>

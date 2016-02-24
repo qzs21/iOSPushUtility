@@ -8,15 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-#define CMD_APN_PATH            @"/usr/bin/apn"
-
 typedef void (^ScriptHelperHandler)(NSString * output, BOOL success);
 
 @interface ScriptHelper : NSObject
 
 + (NSString *)getInstallShellPath;
 + (NSString *)getUninstallShellPath;
++ (NSString *)getAPNPath;
 + (BOOL)hasHouston;
+
++ (void)runCommand:(NSString *)cmd arguments:(NSArray *)argument handler:(ScriptHelperHandler)handler;
 
 + (void)runProcessAsAdministrator:(NSString*)scriptPath
                     withArguments:(NSArray *)arguments
